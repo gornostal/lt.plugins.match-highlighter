@@ -1,6 +1,5 @@
 {"version":3,
- "file":
- "compiled.map",
+ "file":"compiled.map",
  "sources":
  ["src/lt/plugins/match-highlighter.cljs"],
  "lineCount":26,

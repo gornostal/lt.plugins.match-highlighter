@@ -61,6 +61,11 @@
       if (!cm.somethingSelected() && state.showToken) {
         var re = state.showToken === true ? /[\w$]/ : state.showToken;
         var cur = cm.getCursor(), line = cm.getLine(cur.line), start = cur.ch, end = start;
+        var curCh = line.charAt(start);
+        if (!curCh || /[\s\W]/.test(curCh)) {
+          // do nothing if cursor is in the end of the word
+          return;
+        }
         while (start && re.test(line.charAt(start - 1))) --start;
         while (end < line.length && re.test(line.charAt(end))) ++end;
         if (start < end)
