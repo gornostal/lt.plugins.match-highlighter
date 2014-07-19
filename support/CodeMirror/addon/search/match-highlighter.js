@@ -59,9 +59,6 @@
         cm.removeOverlay(state.overlay);
         state.overlay = null;
       }
-      if (!cm.somethingSelected()) {
-        return;
-      }
       // if (!cm.somethingSelected() && state.showToken) {
       //   var re = state.showToken === true ? /[\w$]/ : state.showToken;
       //   var cur = cm.getCursor(), line = cm.getLine(cur.line), start = cur.ch, end = start;
